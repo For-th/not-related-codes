@@ -42,7 +42,3 @@ body {
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
-
-#move-random {
-    transition: all 0.1s ease;
-}
