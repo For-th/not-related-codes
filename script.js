@@ -1,7 +1,7 @@
 function moveRandomE1(elm){
     elm.style.position = "absolute";
-    elm.style.top = Math.floor(Math.random() * 90 + 5) + "%";
-    elm.style.left = Math.floor(Math.random() * 90 + 5) + "%";
+    elm.style.top = Math.floor(Math.random() * 85 + 5) + "%";
+    elm.style.left = Math.floor(Math.random() * 85 + 5) + "%";
 }
 
 // NO button - move randomly on mouse enter (unchanged)
@@ -43,3 +43,4 @@ yesBtn.addEventListener("click", function(e){
         window.location.href = "yes.html";
     }
 });
+
