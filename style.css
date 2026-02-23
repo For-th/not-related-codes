@@ -42,3 +42,32 @@ body {
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
+
+#move-random {
+    transition: all 0.1s ease;
+}
+
+/* Confirm button styles for yes.html */
+.confirm-btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #ff6666;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.confirm-btn:hover {
+    background-color: #ff4444;
+}
+
+.message-sent {
+    color: #4CAF50;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
