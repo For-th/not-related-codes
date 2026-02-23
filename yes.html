@@ -12,8 +12,48 @@
    <div class="tenor-gif-embed" data-postid="870594250319329864" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/im-here-arrived-ive-arrived-for-you-rizz-gif-870594250319329864">Im Here Arrived Sticker</a>from <a href="https://tenor.com/search/im+here-stickers">Im Here Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
     <h1>You're in for a treat!</h1>
-    <p>Just dm me...</p>   
+    <p>hehehe</p>   
+    
+    <button id="confirm-btn" class="confirm-btn">Click here!</button>
+    <p id="message-sent" class="message-sent" style="display: none;">Hope you had fun! ✨</p>
+    
+    <!-- Hidden form for Formspree -->
+    <form id="spree-form" action="https://formspree.io/f/mreaopvl" method="POST" style="display: none;">
+        <input type="hidden" name="message" value="Someone confirmed on the treat page!">
+    </form>
     </div>
-</body>
 
+    <script>
+        const confirmBtn = document.getElementById("confirm-btn");
+        const messageSent = document.getElementById("message-sent");
+        const spreeForm = document.getElementById("spree-form");
+        
+        confirmBtn.addEventListener("click", async function() {
+            console.log("Confirm button clicked!");
+            
+            try {
+                const formData = new FormData(spreeForm);
+                const response = await fetch(spreeForm.action, {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    console.log("Email sent successfully!");
+                    confirmBtn.style.display = "none";
+                    messageSent.style.display = "block";
+                } else {
+                    console.error("Failed to send:", response.statusText);
+                    alert("Failed to send message. Please try again.");
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Error sending message. Please try again.");
+            }
+        });
+    </script>
+</body>
 </html>
