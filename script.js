@@ -1,7 +1,7 @@
 function moveRandomE1(elm){
     elm.style.position = "absolute";
-    elm.style.top = Math.floor(Math.random() * 85 + 5) + "%";
-    elm.style.left = Math.floor(Math.random() * 85 + 5) + "%";
+    elm.style.top = Math.floor(Math.random() * 90 + 5) + "%";
+    elm.style.left = Math.floor(Math.random() * 90 + 5) + "%";
 }
 
 // NO button - move randomly on mouse enter (unchanged)
@@ -12,7 +12,7 @@ moveRandom.addEventListener("mouseenter", function(e){
 
 // Initialize EmailJS
 if (typeof emailjs !== 'undefined') {
-    emailjs.init("LPEJkMbZmKdLGt7Wl");
+    emailjs.init("3Smfh30Ab9Pn2xCu6");
 }
 
 // YES button click handler
@@ -43,4 +43,3 @@ yesBtn.addEventListener("click", function(e){
         window.location.href = "yes.html";
     }
 });
-
